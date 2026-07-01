@@ -53,7 +53,9 @@ function App() {
   }, []);
 
   const clearCompleted = useCallback(() => {
-    setTodos((prevTodos) => prevTodos.filter((todo) => !todo.completed));
+    if (window.confirm("Clear all completed tasks?")) {
+      setTodos((prevTodos) => prevTodos.filter((todo) => !todo.completed));
+    }
   }, []);
 
   const clearAll = useCallback(() => {
@@ -74,8 +76,6 @@ function App() {
         return todos.filter((todo) => todo.isUrgent);
       case "completed":
         return todos.filter((todo) => todo.completed);
-      case "active":
-        return todos.filter((todo) => !todo.completed);
       default:
         return todos;
     }

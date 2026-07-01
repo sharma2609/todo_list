@@ -16,6 +16,6 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
-    "react/prop-types": "off", // We're using TypeScript-style prop validation
+    "react/prop-types": "off", // Props are validated via component contracts
   },
 };

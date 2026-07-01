@@ -30,8 +30,6 @@ const TodoList = React.memo(({ todos, onToggleTodo, onDeleteTodo, filter }) => {
         return "Urgent Tasks";
       case "completed":
         return "Completed Tasks";
-      case "active":
-        return "Active Tasks";
       default:
         return "All Tasks";
     }
